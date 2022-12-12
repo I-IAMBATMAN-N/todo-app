@@ -1,0 +1,360 @@
+/*
+
+The designs were created to the following widths:
+- Mobile: 375px
+- Desktop: 1440px
+## Colors
+### Primary
+- Bright Blue: hsl(220, 98%, 61%)
+- Check Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)
+### Neutral
+
+### Light Theme
+- Very Light Gray: hsl(0, 0%, 98%)
+- Very Light Grayish Blue: hsl(236, 33%, 92%)
+- Light Grayish Blue: hsl(233, 11%, 84%)
+- Dark Grayish Blue: hsl(236, 9%, 61%)
+- Very Dark Grayish Blue: hsl(235, 19%, 35%)
+
+### Dark Theme
+- Very Dark Blue: hsl(235, 21%, 11%)
+- Very Dark Desaturated Blue: hsl(235, 24%, 19%)
+- Light Grayish Blue: hsl(234, 39%, 85%)
+- Light Grayish Blue (hover): hsl(236, 33%, 92%)
+- Dark Grayish Blue: hsl(234, 11%, 52%)
+- Very Dark Grayish Blue: hsl(233, 14%, 35%)
+- Very Dark Grayish Blue: hsl(237, 14%, 26%)
+
+## Typography
+### Body Copy
+- Font size: 18px
+### Font
+- Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
+- Weights: 400, 700
+*/
+
+/* GENERAL */
+@font-face {
+  font-family: "Josefin-Sans";
+  src: url("/fonts/Josefin_Sans/static/JosefinSans-Regular.ttf");
+  font-weight: "regular";
+}
+@font-face {
+  font-family: "Josefin-Sans";
+  src: url("/fonts/Josefin_Sans/static/JosefinSans-Bold.ttf");
+  font-weight: "bold";
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.7%;
+}
+body {
+  font-family: Josefin-Sans;
+  width: 100%;
+  padding-top: 115px;
+  position: relative;
+}
+
+/* THEMES STYLING */
+.dark-theme {
+  background-color: hsl(233, 14%, 35%);
+  color: hsl(236, 33%, 92%);
+}
+.light-theme {
+  background-color: hsl(236, 33%, 92%);
+  color: hsl(233, 14%, 35%);
+}
+.light-theme .check-box {
+  background-color: hsl(236, 33%, 92%);
+  border: solid 1px hsl(233, 14%, 35%);
+}
+.dark-theme,
+.dark-theme .check-box,
+.dark-theme button {
+  background-color: hsl(235, 24%, 19%);
+  color: hsl(234, 11%, 52%);
+}
+.dark-theme .background-top .background-top-image-container {
+  height: 100%;
+  background-image: url("/img/bg-desktop-dark.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.light-theme .background-top .background-top-image-container {
+  height: 100%;
+  background-image: url("/img/bg-desktop-light.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* input header related */
+.dark-theme p {
+  background-color: hsl(235, 24%, 19%);
+  color: hsl(234, 39%, 85%);
+}
+.dark-theme input {
+  background-color: hsl(235, 24%, 19%);
+  color: hsl(234, 11%, 52%);
+}
+.light-theme p {
+  background-color: hsl(234, 39%, 85%);
+  color: hsl(235, 24%, 19%);
+}
+.light-theme input {
+  background-color: hsl(236, 33%, 92%);
+  color: hsl(234, 11%, 52%);
+}
+
+/* all checkboxes */
+.dark-theme .check-box {
+  background-color: hsl(235, 24%, 19%);
+  border: solid 1px hsl(233, 14%, 35%);
+}
+.light-theme .check-box {
+  background-color: hsl(236, 33%, 92%);
+  border: solid 1px hsl(233, 14%, 35%);
+}
+
+/*  todo container related*/
+.dark-theme .todo {
+  background-color: none;
+  border-bottom: solid 0.1px hsl(237, 14%, 26%);
+}
+.dark-theme .todo p {
+  background-color: hsl(235, 24%, 19%);
+  color: hsl(234, 11%, 52%);
+}
+.light-theme .todo {
+  background-color: rgba(0 0 0 0.1);
+  border-bottom: solid 0.1px hsl(234, 39%, 85%);
+}
+.light-theme .todo p {
+  background-color: hsl(236, 33%, 92%);
+  color: hsl(234, 11%, 52%);
+}
+
+/* footer related */
+.dark-theme p {
+  background-color: hsl(235, 24%, 19%);
+  color: hsl(233, 14%, 35%);
+}
+.dark-theme button,
+.dark-theme .show-buttons button {
+  background-color: hsl(235, 24%, 19%);
+  color: hsl(233, 14%, 35%);
+}
+.light-theme p {
+  background-color: hsl(236, 33%, 92%);
+  color: hsl(234, 11%, 52%);
+}
+.light-theme button,
+.light-theme .show-buttons button {
+  background-color: hsl(236, 33%, 92%);
+  color: hsl(234, 11%, 52%);
+}
+/* BODY - BACKGROUND */
+.background-top {
+  height: 28rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+/* MAIN SECTION */
+.todo-app {
+  width: 100%;
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+.todo-header {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 2.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: #fff;
+}
+.todo-header .todo-header--heading {
+  font-size: 3.2rem;
+  letter-spacing: 1rem;
+}
+.todo-header .icon {
+  display: inline-block;
+}
+.theme-icon {
+  stroke: #fff;
+  fill: #fff;
+  width: 2rem;
+}
+.theme-icon:hover {
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+/* CREATE NEW TODO INPUT */
+.create-new-todo-header {
+  width: 100%;
+  height: 5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0rem 1.5rem;
+  box-shadow: 1.2rem 1.2rem 2.4rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.3rem;
+}
+.create-new-todo-input {
+  flex: 1 0;
+  border: none;
+  color: hsl(234, 11%, 52%);
+  padding: 0 1rem;
+}
+.create-new-todo-input:focus {
+  outline: none;
+}
+/* TODOS CONTAINER */
+.bottom-part {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 1.2rem 1.2rem 2.4rem rgba(0, 0, 0, 0.3);
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+}
+.todos-container {
+  flex: 1 0;
+  max-height: 32rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+.todo {
+  display: flex;
+  justify-content: start;
+  gap: 1.2rem;
+  padding: 1.8rem 1.4rem;
+  color: hsl(234, 11%, 52%);
+  font-size: 1.4rem;
+  border-bottom: solid 0.01rem hsl(237, 14%, 26%);
+}
+.todo:hover {
+  cursor: pointer;
+}
+.check-box {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.6rem;
+  flex: 0 0 1.6rem;
+  border-radius: 50%;
+  background-color: hsl(235, 24%, 19%);
+  border: solid 0.1rem hsl(233, 14%, 35%);
+}
+/* TODOS CONTAINER FOOTER */
+.bottom-part .todo-footer {
+  flex: 1 0;
+  min-height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+}
+.bottom-part .todo-footer p {
+  display: inline-block;
+}
+.bottom-part .todo-footer .show-buttons {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.show-buttons button {
+  flex: 0 0 30%;
+}
+.show-buttons button,
+.bottom-part .todo-footer button,
+.bottom-part .todo-footer p {
+  border: none;
+  font-size: 1.2rem;
+}
+.show-buttons button:hover,
+.bottom-part .todo-footer button:hover {
+  cursor: pointer;
+}
+.show-buttons button:focus {
+  color: hsl(220, 98%, 61%);
+}
+/* ------------------------------------------------------------ */
+/* DONE TODOS */
+.done .check-box {
+  background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.done .check-box .check-box--icon {
+  width: 10px;
+  display: inline-block;
+  stroke: hsl(236, 33%, 92%);
+  stroke-width: 3px;
+}
+.done .todo-text {
+  color: hsl(237, 14%, 26%);
+  text-decoration: line-through;
+}
+.display-none {
+  display: none;
+}
+/* ------------------------------------------------------------ */
+@media (max-width: 500px) {
+  html {
+    font-size: 55%;
+  }
+  .bottom-part .todo-footer .show-buttons {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 140%);
+    min-height: 5rem;
+    background-color: hsl(235, 24%, 19%);
+    gap: 2.4rem;
+    width: 100%;
+    box-shadow: 1.2rem 1.2rem 2.4rem rgba(0, 0, 0, 0.3);
+    justify-content: center;
+  }
+  .show-buttons button {
+    flex: 0 0 fit-content;
+  }
+  .dark-theme .background-top .background-top-image-container {
+    background-image: url(img/bg-mobile-dark.jpg);
+  }
+  .light-theme .background-top .background-top-image-container {
+    background-image: url(img/bg-mobile-light.jpg);
+  }
+  .light-theme .bottom-part .todo-footer .show-buttons {
+    background-color: hsl(236, 33%, 92%);
+  }
+}
