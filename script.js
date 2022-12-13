@@ -1,7 +1,7 @@
 "use strict";
 
 const newWorkoutInput = document.querySelector(".create-new-todo-input");
-const todoArray = [];
+let todoArray = [];
 const todosContainer = document.querySelector(".todos-container");
 
 // TODOS CLASS
@@ -194,11 +194,13 @@ function showCompleted(arr) {
 // CLEAR COMPLETED BUTTON
 const clearCompletedButton = document.querySelector(".clear-completed");
 clearCompletedButton.addEventListener("click", function (e) {
-  for (let i = 0; i < todoArray.length; i++) {
-    if (todoArray[i].state === "done") {
-      todoArray.splice(i, 1);
-      displayTodos(todoArray);
+  let activeArr = [];
+  todoArray.forEach((todo) => {
+    if (todo.state === "active") {
+      activeArr.push(todo);
     }
-  }
+  });
+  todoArray = activeArr;
+  displayTodos(todoArray);
   updateItemsCount();
 });
