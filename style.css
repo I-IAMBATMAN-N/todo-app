@@ -34,7 +34,7 @@ The designs were created to the following widths:
 */
 
 /* GENERAL */
-@font-face {
+/* @font-face {
   font-family: "Josefin-Sans";
   src: url("/fonts/Josefin_Sans/static/JosefinSans-Regular.ttf");
   font-weight: "regular";
@@ -43,7 +43,7 @@ The designs were created to the following widths:
   font-family: "Josefin-Sans";
   src: url("/fonts/Josefin_Sans/static/JosefinSans-Bold.ttf");
   font-weight: "bold";
-}
+} */
 * {
   padding: 0;
   margin: 0;
@@ -53,7 +53,7 @@ html {
   font-size: 62.7%;
 }
 body {
-  font-family: Josefin-Sans;
+  font-family: "Josefin Sans", sans-serif;
   width: 100%;
   padding-top: 115px;
   position: relative;
