@@ -56,7 +56,7 @@ const todoContainer = document.querySelector(".todos-container");
 const todoFooter = document.querySelector(".todo-footer");
 let themeArray = [body, createNewTodoHeader, todoContainer, todoFooter];
 
-console.log(themeArray);
+// console.log(themeArray);
 
 changeTheme();
 function changeTheme() {
@@ -103,7 +103,7 @@ function changeTheme() {
         }
       });
 
-      console.log("themeArray", themeArray);
+      // console.log("themeArray", themeArray);
     });
   });
 }
@@ -126,7 +126,7 @@ todosContainer.addEventListener("click", function (e) {
   const arr = Array.from(e.target.closest(".todo").childNodes);
   const innerElementText = arr[3].innerText;
 
-  console.log("innerElementText", innerElementText);
+  // console.log("innerElementText", innerElementText);
   const arrayFromInnerTextElement = Array.from(innerElementText);
 
   let strFinal = "";
@@ -152,8 +152,8 @@ todosContainer.addEventListener("click", function (e) {
     selectedInstance.state = "active";
   }
 
-  console.log("state", selectedInstance.state);
-  console.log("text", selectedInstance.todoText);
+  // console.log("state", selectedInstance.state);
+  // console.log("text", selectedInstance.todoText);
 
   displayTodos(todoArray);
 });
