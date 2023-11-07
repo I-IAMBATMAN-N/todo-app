@@ -1,4 +1,11 @@
 /*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/*
 
 The designs were created to the following widths:
 - Mobile: 375px
@@ -47,6 +54,7 @@ The designs were created to the following widths:
 * {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 html {
@@ -172,9 +180,18 @@ body {
   max-width: 50rem;
   margin-left: auto;
   margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 0 1rem;
 }
@@ -182,8 +199,14 @@ body {
   display: inline-block;
   width: 100%;
   margin-bottom: 2.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 0.5rem 1rem;
   background-color: transparent;
@@ -212,14 +235,21 @@ body {
   width: 100%;
   height: 5rem;
   margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 0.5rem;
   padding: 0rem 1.5rem;
+  -webkit-box-shadow: 1.2rem 1.2rem 2.4rem rgba(0, 0, 0, 0.3);
   box-shadow: 1.2rem 1.2rem 2.4rem rgba(0, 0, 0, 0.3);
   border-radius: 0.3rem;
 }
 .create-new-todo-input {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0;
   flex: 1 0;
   border: none;
   color: hsl(234, 11%, 52%);
@@ -231,10 +261,16 @@ body {
 /* TODOS CONTAINER */
 .bottom-part {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   margin: 0 auto;
   position: relative;
+  -webkit-box-shadow: 1.2rem 1.2rem 2.4rem rgba(0, 0, 0, 0.3);
   box-shadow: 1.2rem 1.2rem 2.4rem rgba(0, 0, 0, 0.3);
   border-top-left-radius: 0.3rem;
   border-top-right-radius: 0.3rem;
@@ -242,9 +278,16 @@ body {
   border-bottom-right-radius: 0.3rem;
 }
 .todos-container {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0;
   flex: 1 0;
   max-height: 32rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
   overflow-y: scroll;
@@ -253,7 +296,11 @@ body {
   overflow-y: scroll;
 }
 .todo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: start;
   gap: 1.2rem;
   padding: 1.8rem 1.4rem;
@@ -266,10 +313,18 @@ body {
 }
 .check-box {
   display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   height: 1.6rem;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 1.6rem;
   flex: 0 0 1.6rem;
   border-radius: 50%;
   background-color: hsl(235, 24%, 19%);
@@ -277,10 +332,18 @@ body {
 }
 /* TODOS CONTAINER FOOTER */
 .bottom-part .todo-footer {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0;
   flex: 1 0;
   min-height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 0 2rem;
   border-bottom-left-radius: 0.3rem;
@@ -290,12 +353,22 @@ body {
   display: inline-block;
 }
 .bottom-part .todo-footer .show-buttons {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 40%;
   flex: 0 0 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .show-buttons button {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 30%;
   flex: 0 0 30%;
 }
 .show-buttons button,
@@ -314,6 +387,14 @@ body {
 /* ------------------------------------------------------------ */
 /* DONE TODOS */
 .done .check-box {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(hsl(192, 100%, 67%)),
+    to(hsl(280, 87%, 65%))
+  );
+  background-image: -o-linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
   background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
 .done .check-box .check-box--icon {
@@ -338,15 +419,22 @@ body {
     position: absolute;
     bottom: 0;
     left: 50%;
+    -webkit-transform: translate(-50%, 140%);
+    -ms-transform: translate(-50%, 140%);
     transform: translate(-50%, 140%);
     min-height: 5rem;
     background-color: hsl(235, 24%, 19%);
     gap: 2.4rem;
     width: 100%;
+    -webkit-box-shadow: 1.2rem 1.2rem 2.4rem rgba(0, 0, 0, 0.3);
     box-shadow: 1.2rem 1.2rem 2.4rem rgba(0, 0, 0, 0.3);
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
   .show-buttons button {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 fit-content;
     flex: 0 0 fit-content;
   }
   .dark-theme .background-top .background-top-image-container {
